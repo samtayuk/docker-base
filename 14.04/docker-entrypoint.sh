@@ -11,7 +11,7 @@ if [ ! -e '/app/configured' ]; then
         NAME="${FILE##*/}"
         echo "#### Running first run script: $NAME"
         /bin/bash $FILE
-    done < <( find $SCRIPTS_PATH/* -maxdepth 0 -type f 
+    done < <( find $SCRIPTS_PATH/* -maxdepth 0 -type f )
     
     touch /app/configured
 fi
