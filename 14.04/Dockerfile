@@ -9,4 +9,6 @@ RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selectio
     && mkdir -p /app/firstrun
 
 COPY docker-entrypoint.sh /app/
+RUN chmod +x /app/docker-entrypoint.sh
+
 entrypoint ['/app/docker-entrypoint.sh']
